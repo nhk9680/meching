@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+
+    android:layout_height="fill_parent"
+
+    android:gravity="center"
+
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="222dp"
+        android:background="@drawable/popupimage"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Warning"
+            android:textSize="22dp"
+            android:textColor="#111111"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/contents"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="center"
+            android:text="Press 'OK' to return main.\nWould you go back?"
+            android:textColor="#111111"
+            android:textSize="15dp"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/no"
+                android:layout_width="152dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@null"
+                android:onClick="cancelbutton"
+                android:text="CANCEL"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <Button
+                android:id="@+id/yes"
+                android:layout_width="154dp"
+                android:layout_height="54dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="okbutton"
+                android:text="OK"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/no"
+                tools:layout_editor_absoluteY="0dp"
+                android:textColor="@color/colorPrimaryDark"/>
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

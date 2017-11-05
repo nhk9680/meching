@@ -1,0 +1,44 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
+         dismiss it. -->
+    <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/list_preference_entries"
+        android:entryValues="@array/list_preference_entries"
+        android:key="list_preference_1"
+        android:summary="이렇게 리스트 말고"
+        android:title="도움말" />
+
+    <!-- This preference simply launches an intent when selected. Use this UI sparingly, per
+         design guidelines. -->
+    <Preference android:title= "동기화"
+                android:summary="오오 이거 구현하면 정말 어려워질듯 제발 빼고 나중에 업데이트로 하자">
+        <intent android:action="android.settings.SYNC_SETTINGS" />
+    </Preference>
+
+    <Preference android:title= "데이터베이스 업데이트"
+                android:summary="는 시작할때 팝업으로 띄우자">
+        <intent android:action="android.settings.SYNC_SETTINGS" />
+    </Preference>
+
+    <ListPreference
+        android:defaultValue="180"
+        android:entries="@array/pref_sync_frequency_titles"
+        android:entryValues="@array/pref_sync_frequency_values"
+        android:key="sync_frequency"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:summary="팝업 띄워서 보여주거나 Fragment 해서 보여주고 싶은데"
+        android:title="만든이" />
+
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/list_preference_entries"
+        android:entryValues="@array/list_preference_entries"
+        android:key="list_preference_1"
+        android:summary="어떻게 하는지 아직 모르겠어요 ㅠㅠ"
+        android:title="정보" />
+
+</PreferenceScreen>
